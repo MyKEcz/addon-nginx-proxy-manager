@@ -95,6 +95,8 @@ RUN \
     \
     && apk del --purge .build-dependencies \
     \
+    && curl https://support.cloudflare.com/hc/en-us/article_attachments/360044928032/origin-pull-ca.pem -o /opt/cloudflare.pem \
+    \
     && rm -f -r \
         /app \
         /etc/init.d/nginx \
